@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern CSS</title>
+  <link rel="stylesheet" href="index.css" /> <!--css는 stylesheet-->
+  <link rel="stylesheet" href="layout.css" />
+  <style> 
+  *{
+    box-sizing: border-box; /*border-box 여백과 테두리를 포함하는 박스, contentbox 박스의 크기를 측정하는 기본값
+  }
+    nav{background: #4a4a4a; /* 내부스타일시트 2순위, 외부스타일시트 3순위*/
+    }
+    #id{  /*id는 하나의 문서에서 한 요소에만 사용*/
+      text-decoration: none;
+    }
+    .menu-item{
+      text-decoration: underline;
+    }
+    .selected{
+      font-weight: bold;
+      color: #009999;
+    }
+  </style>
+</head>
+<body>
+<header>This is the header.</header>
+<div class="container">
+  <!--인라인스타일시트 3순위-->
+  <nav style="background: #111; color: blue;"> 
+    <h4>This is the navigation section</h4>
+    <ul>
+      <li id="id">Home</li>
+      <li class="menu-item selected">Mac</li> <!--여러 class를 하나의 요소에 적용시킬때는 띄어쓰기-->
+      <li class="menu-item">iphone</li>
+      <li class="menu-item">ipad</li>
+    </ul>
+  </nav>
+  <main>
+    <h1>This is the main content</h1>
+    <p>...</p>
+  </main>
+  <aside>
+    <h4>This is an aside section
+      <p>...</p>
+  </aside>
+</div>
+<footer>
+  <ul>
+    <li>개인정보 처리방침</li>
+    <li>이용 약관</li>
+    <li>법적 고지</li>
+  </ul>
+  <!-- inline(span)태그는 width, height 속성이 없다 -->
+  <!-- 
+    /* inline-block 속성을 부여시 width, height 적용가능 */
+    span{
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+    }
+  -->
+</footer>
+</body>
+</html>
